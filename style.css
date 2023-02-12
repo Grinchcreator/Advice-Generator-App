@@ -1,0 +1,110 @@
+ /*fonts*/
+ @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap');
+
+ /*colors*/
+ :root{
+ --LightCyan: hsl(193, 38%, 86%);
+ --NeonGreen: hsl(150, 100%, 66%);
+ --GrayishBlue: hsl(217, 19%, 38%);
+ --DarkGrayishBlue: hsl(217, 19%, 24%);
+ --DarkBlue: hsl(218, 23%, 16%);
+ }
+ 
+ /** Reset **/
+ *,
+ *::before,
+ *::after {
+   box-sizing: border-box;
+ }
+ 
+ * {
+   padding: 0;
+   margin: 0;
+ }
+
+
+ body{
+ box-sizing: border-box;
+ font-family: "Manrope", sans-serif;
+ min-height: 100vh;
+ min-width: 100vw;
+ text-rendering: optimizeSpeed;
+ line-height: 1.5;
+ font-size: 28px;
+ background-color: var(--DarkBlue);
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ }
+
+ .advice-box{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ text-align: center;
+ background-color: var(--DarkGrayishBlue);
+ color: var(--LightCyan);
+ border-radius: 13px;
+ width: 18em;
+ height: 12em;
+ }
+
+ .advice-id{
+ color: var(--NeonGreen);
+ text-transform: uppercase;
+ font-size: 13px;
+ font-weight: 600;
+ letter-spacing: 3px;
+ padding: 1em;
+ }
+
+ .advice-text{
+ padding: 0 1em 1em 1em;
+ font-weight: 800;
+ }
+
+ .pattern-devider{
+ background-image: url("images/pattern-divider-desktop.svg");
+ background-repeat: no-repeat;
+ background-position: center;
+ width: 12em;
+ height: 2em;
+ }
+
+ .shuffle-btn{
+ border-radius: 50%;
+ background-color: var(--NeonGreen);
+ border-color: transparent;
+ background-image: url("images/icon-dice.svg");
+ background-repeat: no-repeat;
+ background-position: center;
+ width: 4rem;
+ height: 4rem;
+ transition: all ease-in-out 0.3s;
+ transform: translateY(-50%);
+ }
+
+ .shuffle-btn:hover{
+ cursor: pointer;
+ box-shadow: -1px 1px 40px 12px rgba(82, 255, 169, 0.832);
+ transition: all ease-in-out 0.3s;
+
+ }
+
+ @media screen and (max-width: 480px) {
+    body{
+    padding: 0 2em 0 2em;
+    font-size: 24px;
+    }
+    .advice-box{
+    width: fit-content;
+    height: fit-content;
+    padding: 1em;
+    }
+    .pattern-devider{
+    margin-bottom: 1em;
+    }
+ }
